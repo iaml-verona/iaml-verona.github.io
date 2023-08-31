@@ -89,7 +89,15 @@ enableRobotsTXT = true
     {name = "instagram", url = "https://www.instagram.com/iaml.verona/"},
     {name = "facebook", url = "https://www.facebook.com/iaml.verona"},
     {name = "telegram", url = "https://t.me/iaml_verona"},
-    {name = "eventbrite", url = "https://www.eventbrite.it/o/iaml-verona-47224673793"},
+    {name = "eventbrite", url = "https://iamlvr.eventbrite.com"},
     {name = "meetup", url = "https://www.meetup.com/it-IT/iaml-verona/"},
     {name = "email", url = "mailto:iamldotvr@gmail.com"}
   ]
+
+[module]
+  [[module.mounts]]
+    source = 'content'
+    target = 'content'
+[[module.mounts]]
+    source = 'prebuild/public/events'
+    target = 'content/events'

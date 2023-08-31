@@ -1,0 +1,23 @@
+{{ with resources.GetRemote "https://www.eventbrite.it/org/47224673793/showmore/?page=1&page_size=30&type=past" }}
+  {{ $events := unmarshal .Content }}
+  {{ range $events.data.events}}
+    {{/* 1. */}} {{ $string := jsonify . }}
+    {{/* 2. */}} {{ $data := dict "title" .name.text "image" .logo.url "type" "post" "button_link" .url "date" .start.local }}
+    {{/* 2.5. */}} {{ $data_string := jsonify $data }}
+    {{/* 3. */}} {{ $filename := printf "events/%s.md" (urlize .slugified_name) }}
+    {{/* 4. */}} {{ $resource := resources.FromString $filename $data_string }} 
+    {{/* 5. */}} {{ $file := $resource.RelPermalink }} 
+  {{ end }}
+{{ end }}
+
+{{ with resources.GetRemote "https://www.eventbrite.it/org/47224673793/showmore/?page=1&page_size=30&type=future" }}
+  {{ $events := unmarshal .Content }}
+  {{ range $events.data.events}}
+    {{/* 1. */}} {{ $string := jsonify . }}
+    {{/* 2. */}} {{ $data := dict "title" .name.text "image" .logo.url "type" "post" "button_link" .url "date" .start.local }}
+    {{/* 2.5. */}} {{ $data_string := jsonify $data }}
+    {{/* 3. */}} {{ $filename := printf "events/%s.md" (urlize .slugified_name) }}
+    {{/* 4. */}} {{ $resource := resources.FromString $filename $data_string }} 
+    {{/* 5. */}} {{ $file := $resource.RelPermalink }} 
+  {{ end }}
+{{ end }}
