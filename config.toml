@@ -1,0 +1,95 @@
+baseURL = "https://iaml-verona.github.io/"
+defaultContentLanguage = "en"
+languageCode = "en"
+
+title = "Iaml Verona"
+
+theme = ["gokarna"]
+
+# Automatically generate robots.txt
+enableRobotsTXT = true
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "<span data-feather='home'></span>"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    # Unique identifier for a menu item
+    identifier = "events"
+
+    url = "/events/"
+    
+    # You can add extra information before the name (HTML format is supported), such as icons
+    pre = "<span data-feather='calendar'></span>"
+
+    # Display name
+    name = "Eventi"
+
+    # Weights are used to determine the ordering
+    weight = 2
+  
+  [[menu.main]]
+    # Unique identifier for a menu item
+    identifier = "about"
+
+    url = "/about/"
+    
+    # You can add extra information before the name (HTML format is supported), such as icons
+    pre = "<span data-feather='book-open'></span>"
+
+    # You can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+
+    # Display name
+    name = "About"
+
+    # Weights are used to determine the ordering
+    weight = 3
+    
+  [[menu.main]]
+    identifier = "github"
+    url = "https://github.com/iaml-verona"
+    weight = 4
+    
+    # We use feather-icons: https://feathericons.com/
+    pre = "<span data-feather='github'></span>"
+
+[params]
+  # URL for the avatar on homepage
+  avatarURL = "/images/iaml_verona.png"
+
+  # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
+  avatarSize = "size-l"
+
+  # Description to display on homepage
+  description = "Benvenuti nel sito di IAML Verona!"
+
+  # Accent color is displayed when you hover over <a> tags
+  accentColor = "#FF4D4D"
+
+  # You can use this to inject any HTML in the <head> tag.
+  # Ideal usecase for this is to import custom js/css or add your analytics snippet
+  customHeadHTML = ""
+
+  # Keywords relevant for SEO
+  metaKeywords = ["iaml", "verona", "IA", "Machine Learning", "Artificial Intelligence"]
+
+  # If you want to display posts on the homepage, the options are
+  # "popular" (order posts by weight), "recent" (order posts by date)
+  # or "" (do not display, default option)
+  showPostsOnHomePage = "recent"
+
+  # Footer text
+  footer = "IAML Verona"
+  
+  socialIcons = [
+    {name = "instagram", url = "https://www.instagram.com/iaml.verona/"},
+    {name = "facebook", url = "https://www.facebook.com/iaml.verona"},
+    {name = "telegram", url = "https://t.me/iaml_verona"},
+    {name = "eventbrite", url = "https://www.eventbrite.it/o/iaml-verona-47224673793"},
+    {name = "meetup", url = "https://www.meetup.com/it-IT/iaml-verona/"},
+    {name = "email", url = "mailto:iamldotvr@gmail.com"}
+  ]
