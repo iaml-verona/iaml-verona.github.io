@@ -2,7 +2,7 @@ baseURL = "https://iaml-verona.github.io/"
 defaultContentLanguage = "en"
 languageCode = "en"
 
-title = "Iaml Verona"
+title = "IAML Verona"
 
 theme = ["gokarna"]
 
