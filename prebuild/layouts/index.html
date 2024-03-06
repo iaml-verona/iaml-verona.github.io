@@ -1,4 +1,4 @@
-{{ with resources.GetRemote "https://www.eventbrite.it/org/47224673793/showmore/?page=1&page_size=30&type=future" }}
+{{ with resources.GetRemote "https://www.eventbrite.it/org/47224673793/showmore/?type=future" }}
   {{ $events := unmarshal .Content }}
   {{ range $events.data.events}}
     {{ $data := dict 
@@ -8,6 +8,7 @@
       "button_link" .url 
       "date" .start.local
       "description" .description.text
+      "publishdate" "2024-03-05T00:00:00"
     }}
     {{ $data_string := jsonify $data }}
     {{ $filename := printf "events/%s.md" (urlize .slugified_name) }}
@@ -16,7 +17,7 @@
   {{ end }}
 {{ end }}
 
-{{ with resources.GetRemote "https://www.eventbrite.it/org/47224673793/showmore/?page=1&page_size=30&type=past" }}
+{{ with resources.GetRemote "https://www.eventbrite.it/org/47224673793/showmore/?type=past" }}
   {{ $events := unmarshal .Content }}
   {{ range $events.data.events}}
     {{ $data := dict 
@@ -26,6 +27,7 @@
       "button_link" .url 
       "date" .start.local
       "description" .description.text
+      "publishdate" "2024-03-05T00:00:00"
     }}
     {{ $data_string := jsonify $data }}
     {{ $filename := printf "events/%s.md" (urlize .slugified_name) }}
