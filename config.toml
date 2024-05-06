@@ -91,7 +91,8 @@ enableRobotsTXT = true
     {name = "telegram", url = "https://t.me/iaml_verona"},
     {name = "eventbrite", url = "https://iamlvr.eventbrite.com"},
     {name = "meetup", url = "https://www.meetup.com/it-IT/iaml-verona/"},
-    {name = "email", url = "mailto:iamldotvr@gmail.com"}
+    {name = "email", url = "mailto:iamldotvr@gmail.com"},
+    {name = "youtube", url = "https://www.youtube.com/@IamlVerona"}
   ]
 
 [module]
